@@ -25,7 +25,7 @@ def drawBox(action, x, y, flags, userdata):
         cv2.imshow("Window",source_img)
 
 
-source_img = cv2.imread("sample_1.jpg",1)
+source_img = cv2.imread("sample_2.jpg",1)
 # Make a dummy image, will be useful to clear the drawing
 dummy = source_img.copy()
 cv2.namedWindow("Window")
