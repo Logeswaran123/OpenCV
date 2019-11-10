@@ -1,10 +1,6 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Nov  3 18:55:13 2019
+# OpenPose Real Time
 
-@author: admin
-"""
-
+# import
 import cv2
 import time
 import numpy as np
@@ -12,15 +8,16 @@ from dataPath import DATA_PATH
 
 
 # Load a Caffe Model
-protoFile = r"C:\Users\admin\Desktop\Opencv Course\Week10\week10-python\models" +"\mpi.prototxt"
-weightsFile = r"C:\Users\admin\Desktop\Opencv Course\Week10\week10-python\models" +"\pose_iter_160000.caffemodel"
-filename = DATA_PATH + "images/man.jpg"
+protoFile = r"mpi.prototxt"
+weightsFile = r"pose_iter_160000.caffemodel"
+filename ="video file name with extension"
+
 # Specify number of points in the model
 nPoints = 15
 POSE_PAIRS = [[0,1], [1,2], [2,3], [3,4], [1,5], [5,6], [6,7], [1,14], [14,8], [8,9], [9,10], [14,11], [11,12], [12,13] ]
 net = cv2.dnn.readNetFromCaffe(protoFile, weightsFile)
 
-cap=cv2.VideoCapture('meeting.mp4')
+cap=cv2.VideoCapture('filename')
 frame_width = int(cap.get(3))
 frame_height = int(cap.get(4))
 outmp4 = cv2.VideoWriter('output.mp4',cv2.VideoWriter_fourcc(*'XVID'), 10, (frame_width,frame_height))
