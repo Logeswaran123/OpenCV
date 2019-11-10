@@ -14,7 +14,7 @@ filename ="video file name with extension"
 
 # Specify number of points in the model
 nPoints = 15
-POSE_PAIRS = [[0,1], [1,2], [2,3], [3,4], [1,5], [5,6], [6,7], [1,14], [14,8], [8,9], [9,10], [14,11], [11,12], [12,13] ]
+POSE_PAIRS = [ [0,1], [1,2], [2,3], [3,4], [1,5], [5,6], [6,7], [1,14], [14,8], [8,9], [9,10], [14,11], [11,12], [12,13] ]
 net = cv2.dnn.readNetFromCaffe(protoFile, weightsFile)
 
 cap=cv2.VideoCapture('filename')
